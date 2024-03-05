@@ -15,3 +15,14 @@ class BinaryTree:
             self.root = node
         else:
             self.root = None
+
+    """ precurso em ordem simetrica """
+
+    def simetric_traversal(self, node=None):
+        if node is None:
+            node = self.root
+        if node.left:
+            self.simetric_traversal(node.left)
+        print(node)
+        if node.right:
+            self.simetric_traversal(node.right)
