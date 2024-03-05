@@ -22,7 +22,9 @@ class BinaryTree:
         if node is None:
             node = self.root
         if node.left:
+            print('(', end=' ')
             self.simetric_traversal(node.left)
-        print(node)
+        print(node, end=' ')
         if node.right:
             self.simetric_traversal(node.right)
+            print(') ', end=' ')
